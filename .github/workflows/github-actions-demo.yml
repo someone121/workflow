@@ -54,20 +54,12 @@ jobs:
     if: github.event.inputs.environment == 'Production'
     steps:
       - run: |
-          echo "🚀 Step 1..."
-          sleep 10
-      - run: |
-          echo "🚀 Step 2..."
-          sleep 10
-      - run: |
-          echo "🚀 Step 3..."
-          sleep 10
-      - run: |
-          echo "🚀 Step 4..."
-          sleep 10
-      - run: |
-          echo "🚀 Step 5..."
-          sleep 10
+          for num in 1 2 3 4 5;
+            do
+              echo "🚀 Step $num..."
+              sleep 5
+            done
+         
 
   
     
